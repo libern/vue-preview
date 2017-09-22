@@ -1,17 +1,17 @@
 import PreviewComponent from './preview.vue'
-let $vm
+var $vm
 export default {
-  install (Vue) {
-    let Preview = Vue.extend(PreviewComponent)
+  install:function (vue) {
+    var Preview = Vue.extend(PreviewComponent)
     if (!$vm) {
       $vm = new Preview({el: document.createElement('div')})
       document.body.appendChild($vm.$el)
     }
     const preview = {
-      open (index, list, params) {
+      open:function (index, list, params) {
         $vm.open(index, list, params)
       },
-      close () {
+      close:function () {
         $vm.close()
       }
     }
