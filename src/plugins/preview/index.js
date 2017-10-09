@@ -7,7 +7,7 @@ export default {
       $vm = new Preview({el: document.createElement('div')})
       document.body.appendChild($vm.$el)
     }
-    const preview = {
+    var preview = {
       open:function (index, list, params) {
         $vm.open(index, list, params)
       },
